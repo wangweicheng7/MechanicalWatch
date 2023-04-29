@@ -7,18 +7,59 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		BC21CE4629F7D1D2005A27EF /* MechanicalWatchView.h in Headers */ = {isa = PBXBuildFile; fileRef = BC21CE4529F7D1D2005A27EF /* MechanicalWatchView.h */; };
-		BC21CE4829F7D1D2005A27EF /* MechanicalWatchView.m in Sources */ = {isa = PBXBuildFile; fileRef = BC21CE4729F7D1D2005A27EF /* MechanicalWatchView.m */; };
+		BC21CE5429F7D1FF005A27EF /* MechanicalWatchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC21CE4E29F7D1FE005A27EF /* MechanicalWatchView.swift */; };
+		BC21CE5529F7D1FF005A27EF /* WatchHandView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC21CE4F29F7D1FE005A27EF /* WatchHandView.swift */; };
+		BC21CE5629F7D1FF005A27EF /* NSBezierPath+Quartz.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC21CE5029F7D1FE005A27EF /* NSBezierPath+Quartz.swift */; };
+		BC21CE5729F7D1FF005A27EF /* GearView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC21CE5129F7D1FE005A27EF /* GearView.swift */; };
+		BC21CE5829F7D1FF005A27EF /* Number+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC21CE5229F7D1FF005A27EF /* Number+Ex.swift */; };
+		BC21CE5929F7D1FF005A27EF /* WatchDialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC21CE5329F7D1FF005A27EF /* WatchDialView.swift */; };
+		BC21CE7429F7D308005A27EF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC21CE7329F7D308005A27EF /* AppDelegate.swift */; };
+		BC21CE7629F7D308005A27EF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC21CE7529F7D308005A27EF /* ViewController.swift */; };
+		BC21CE7829F7D309005A27EF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC21CE7729F7D309005A27EF /* Assets.xcassets */; };
+		BC21CE7B29F7D30A005A27EF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC21CE7929F7D309005A27EF /* Main.storyboard */; };
+		BC21CE8229FA1C04005A27EF /* MechanicalWatchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC21CE4E29F7D1FE005A27EF /* MechanicalWatchView.swift */; };
+		BC21CE8329FA1C0F005A27EF /* GearView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC21CE5129F7D1FE005A27EF /* GearView.swift */; };
+		BC21CE8429FA1C0F005A27EF /* WatchDialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC21CE5329F7D1FF005A27EF /* WatchDialView.swift */; };
+		BC21CE8529FA1C0F005A27EF /* Number+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC21CE5229F7D1FF005A27EF /* Number+Ex.swift */; };
+		BC21CE8629FA1C0F005A27EF /* WatchHandView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC21CE4F29F7D1FE005A27EF /* WatchHandView.swift */; };
+		BC21CE8729FA1C0F005A27EF /* NSBezierPath+Quartz.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC21CE5029F7D1FE005A27EF /* NSBezierPath+Quartz.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BC21CE8029FA1BE9005A27EF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BC21CE3929F7D1D2005A27EF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BC21CE4129F7D1D2005A27EF;
+			remoteInfo = MechanicalWatch;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		BC21CE4229F7D1D2005A27EF /* MechanicalWatch.saver */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MechanicalWatch.saver; sourceTree = BUILT_PRODUCTS_DIR; };
-		BC21CE4529F7D1D2005A27EF /* MechanicalWatchView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MechanicalWatchView.h; sourceTree = "<group>"; };
-		BC21CE4729F7D1D2005A27EF /* MechanicalWatchView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MechanicalWatchView.m; sourceTree = "<group>"; };
+		BC21CE4E29F7D1FE005A27EF /* MechanicalWatchView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MechanicalWatchView.swift; sourceTree = "<group>"; };
+		BC21CE4F29F7D1FE005A27EF /* WatchHandView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WatchHandView.swift; sourceTree = "<group>"; };
+		BC21CE5029F7D1FE005A27EF /* NSBezierPath+Quartz.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSBezierPath+Quartz.swift"; sourceTree = "<group>"; };
+		BC21CE5129F7D1FE005A27EF /* GearView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GearView.swift; sourceTree = "<group>"; };
+		BC21CE5229F7D1FF005A27EF /* Number+Ex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Number+Ex.swift"; sourceTree = "<group>"; };
+		BC21CE5329F7D1FF005A27EF /* WatchDialView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WatchDialView.swift; sourceTree = "<group>"; };
+		BC21CE7129F7D307005A27EF /* Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BC21CE7329F7D308005A27EF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		BC21CE7529F7D308005A27EF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		BC21CE7729F7D309005A27EF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BC21CE7A29F7D30A005A27EF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		BC21CE7C29F7D30A005A27EF /* Example.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Example.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		BC21CE3F29F7D1D2005A27EF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BC21CE6E29F7D307005A27EF /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -32,6 +73,7 @@
 			isa = PBXGroup;
 			children = (
 				BC21CE4429F7D1D2005A27EF /* MechanicalWatch */,
+				BC21CE7229F7D308005A27EF /* Example */,
 				BC21CE4329F7D1D2005A27EF /* Products */,
 			);
 			sourceTree = "<group>";
@@ -40,6 +82,7 @@
 			isa = PBXGroup;
 			children = (
 				BC21CE4229F7D1D2005A27EF /* MechanicalWatch.saver */,
+				BC21CE7129F7D307005A27EF /* Example.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -47,10 +90,26 @@
 		BC21CE4429F7D1D2005A27EF /* MechanicalWatch */ = {
 			isa = PBXGroup;
 			children = (
-				BC21CE4529F7D1D2005A27EF /* MechanicalWatchView.h */,
-				BC21CE4729F7D1D2005A27EF /* MechanicalWatchView.m */,
+				BC21CE4E29F7D1FE005A27EF /* MechanicalWatchView.swift */,
+				BC21CE5129F7D1FE005A27EF /* GearView.swift */,
+				BC21CE5329F7D1FF005A27EF /* WatchDialView.swift */,
+				BC21CE4F29F7D1FE005A27EF /* WatchHandView.swift */,
+				BC21CE5029F7D1FE005A27EF /* NSBezierPath+Quartz.swift */,
+				BC21CE5229F7D1FF005A27EF /* Number+Ex.swift */,
 			);
 			path = MechanicalWatch;
+			sourceTree = "<group>";
+		};
+		BC21CE7229F7D308005A27EF /* Example */ = {
+			isa = PBXGroup;
+			children = (
+				BC21CE7329F7D308005A27EF /* AppDelegate.swift */,
+				BC21CE7529F7D308005A27EF /* ViewController.swift */,
+				BC21CE7729F7D309005A27EF /* Assets.xcassets */,
+				BC21CE7929F7D309005A27EF /* Main.storyboard */,
+				BC21CE7C29F7D30A005A27EF /* Example.entitlements */,
+			);
+			path = Example;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -60,7 +119,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BC21CE4629F7D1D2005A27EF /* MechanicalWatchView.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +143,24 @@
 			productReference = BC21CE4229F7D1D2005A27EF /* MechanicalWatch.saver */;
 			productType = "com.apple.product-type.bundle";
 		};
+		BC21CE7029F7D307005A27EF /* Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BC21CE7D29F7D30A005A27EF /* Build configuration list for PBXNativeTarget "Example" */;
+			buildPhases = (
+				BC21CE6D29F7D307005A27EF /* Sources */,
+				BC21CE6E29F7D307005A27EF /* Frameworks */,
+				BC21CE6F29F7D307005A27EF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BC21CE8129FA1BE9005A27EF /* PBXTargetDependency */,
+			);
+			name = Example;
+			productName = Example;
+			productReference = BC21CE7129F7D307005A27EF /* Example.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -92,9 +168,14 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1410;
 				LastUpgradeCheck = 1410;
 				TargetAttributes = {
 					BC21CE4129F7D1D2005A27EF = {
+						CreatedOnToolsVersion = 14.1;
+						LastSwiftMigration = 1410;
+					};
+					BC21CE7029F7D307005A27EF = {
 						CreatedOnToolsVersion = 14.1;
 					};
 				};
@@ -113,6 +194,7 @@
 			projectRoot = "";
 			targets = (
 				BC21CE4129F7D1D2005A27EF /* MechanicalWatch */,
+				BC21CE7029F7D307005A27EF /* Example */,
 			);
 		};
 /* End PBXProject section */
@@ -125,6 +207,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		BC21CE6F29F7D307005A27EF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BC21CE7829F7D309005A27EF /* Assets.xcassets in Resources */,
+				BC21CE7B29F7D30A005A27EF /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -132,11 +223,50 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BC21CE4829F7D1D2005A27EF /* MechanicalWatchView.m in Sources */,
+				BC21CE5629F7D1FF005A27EF /* NSBezierPath+Quartz.swift in Sources */,
+				BC21CE5429F7D1FF005A27EF /* MechanicalWatchView.swift in Sources */,
+				BC21CE5929F7D1FF005A27EF /* WatchDialView.swift in Sources */,
+				BC21CE5529F7D1FF005A27EF /* WatchHandView.swift in Sources */,
+				BC21CE5729F7D1FF005A27EF /* GearView.swift in Sources */,
+				BC21CE5829F7D1FF005A27EF /* Number+Ex.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BC21CE6D29F7D307005A27EF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BC21CE7629F7D308005A27EF /* ViewController.swift in Sources */,
+				BC21CE8529FA1C0F005A27EF /* Number+Ex.swift in Sources */,
+				BC21CE8429FA1C0F005A27EF /* WatchDialView.swift in Sources */,
+				BC21CE8629FA1C0F005A27EF /* WatchHandView.swift in Sources */,
+				BC21CE7429F7D308005A27EF /* AppDelegate.swift in Sources */,
+				BC21CE8729FA1C0F005A27EF /* NSBezierPath+Quartz.swift in Sources */,
+				BC21CE8229FA1C04005A27EF /* MechanicalWatchView.swift in Sources */,
+				BC21CE8329FA1C0F005A27EF /* GearView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BC21CE8129FA1BE9005A27EF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BC21CE4129F7D1D2005A27EF /* MechanicalWatch */;
+			targetProxy = BC21CE8029FA1BE9005A27EF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		BC21CE7929F7D309005A27EF /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BC21CE7A29F7D30A005A27EF /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		BC21CE4929F7D1D2005A27EF /* Debug */ = {
@@ -251,6 +381,7 @@
 		BC21CE4C29F7D1D2005A27EF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
@@ -259,10 +390,17 @@
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_NSPrincipalClass = MechanicalWatchView;
 				INSTALL_PATH = "$(HOME)/Library/Screen Savers";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.weicheng.MechanicalWatch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				WRAPPER_EXTENSION = saver;
 			};
 			name = Debug;
@@ -270,6 +408,7 @@
 		BC21CE4D29F7D1D2005A27EF /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
@@ -278,11 +417,87 @@
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_NSPrincipalClass = MechanicalWatchView;
 				INSTALL_PATH = "$(HOME)/Library/Screen Savers";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.weicheng.MechanicalWatch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
 				WRAPPER_EXTENSION = saver;
+			};
+			name = Release;
+		};
+		BC21CE7E29F7D30A005A27EF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Example/Example.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3B89Q3LKCK;
+				ENABLE_HARDENED_RUNTIME = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/$(PROJECT_NAME)/";
+				GENERATE_INFOPLIST_FILE = YES;
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/$(PROJECT_NAME)/";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSMainStoryboardFile = Main;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = "$(SRCROOT)/$(PROJECT_NAME)/";
+				MARKETING_VERSION = 1.0;
+				MODULEMAP_PRIVATE_FILE = "";
+				PRODUCT_BUNDLE_IDENTIFIER = com.weicheng.Example;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_INCLUDE_PATHS = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/$(PROJECT_NAME)/";
+			};
+			name = Debug;
+		};
+		BC21CE7F29F7D30A005A27EF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Example/Example.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3B89Q3LKCK;
+				ENABLE_HARDENED_RUNTIME = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/$(PROJECT_NAME)/";
+				GENERATE_INFOPLIST_FILE = YES;
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/$(PROJECT_NAME)/";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSMainStoryboardFile = Main;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = "$(SRCROOT)/$(PROJECT_NAME)/";
+				MARKETING_VERSION = 1.0;
+				MODULEMAP_PRIVATE_FILE = "";
+				PRODUCT_BUNDLE_IDENTIFIER = com.weicheng.Example;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_INCLUDE_PATHS = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/$(PROJECT_NAME)/";
 			};
 			name = Release;
 		};
@@ -303,6 +518,15 @@
 			buildConfigurations = (
 				BC21CE4C29F7D1D2005A27EF /* Debug */,
 				BC21CE4D29F7D1D2005A27EF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BC21CE7D29F7D30A005A27EF /* Build configuration list for PBXNativeTarget "Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BC21CE7E29F7D30A005A27EF /* Debug */,
+				BC21CE7F29F7D30A005A27EF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
