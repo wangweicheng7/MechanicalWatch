@@ -9,11 +9,11 @@ import Cocoa
 
 class WatchDialView: NSView {
     
-    let dialRadius: CGFloat = 100.0
-    let smallTickLength: CGFloat = 5.0
-    let largeTickLength: CGFloat = 15.0
-    let smallTickWidth: CGFloat = 1.0
-    let largeTickWidth: CGFloat = 2.0
+    var _dialRadius: CGFloat = 0
+    let _smallTickLength: CGFloat = 30.0
+    let _largeTickLength: CGFloat = 60.0
+    let _smallTickWidth: CGFloat = 2.0
+    let _largeTickWidth: CGFloat = 6.0
     
     
     private var timer: Timer?
@@ -24,19 +24,16 @@ class WatchDialView: NSView {
     
     lazy var shapeLayer: CAShapeLayer = {
         let clayer = CAShapeLayer()
-        clayer.fillColor = NSColor.clear.cgColor
-        clayer.lineWidth = 2.0
-        //        clayer.lineCap = .round
-        //        clayer.lineJoin = .round
-        clayer.strokeColor = NSColor.gray.cgColor//Configuration.shared.tintColor.cgColor
+        clayer.lineWidth = 5.0
+        clayer.lineCap = .round
+        clayer.lineJoin = .round
+        clayer.strokeColor = NSColor.white.cgColor//Configuration.shared.tintColor.cgColor
         clayer.autoreverses = true
         return clayer
     }()
     
     override init(frame: NSRect) {
         super.init(frame: frame)
-        
-        
         initaliz()
     }
     
@@ -46,33 +43,25 @@ class WatchDialView: NSView {
     }
     
     func initaliz(){
-        hourHand = WatchHandView(frame: NSRect(x: bounds.width / 2 - 3, y: bounds.height/2, width: 6, height: 60))
-        minuteHand = WatchHandView(frame: NSRect(x: bounds.width / 2 - 2, y: bounds.height/2, width: 4, height: 80))
-        secondHand = WatchHandView(frame: NSRect(x: bounds.width / 2 - 1, y: bounds.height/2 + 10, width: 2, height: 100))
         
-        secondHand.setRotation(CGPoint(x: 50, y: 150))
+        _dialRadius = bounds.width < 516 ? 290 : bounds.width / 2
         
+        hourHand = WatchHandView(frame: NSRect(x: bounds.width / 2 - 3, y: bounds.height/2, width: 6, height: 130),
+                                 type: .hour)
+        minuteHand = WatchHandView(frame: NSRect(x: bounds.width / 2 - 3, y: bounds.height/2, width: 6, height: 234),
+                                   type: .minute)
+        secondHand = WatchHandView(frame: NSRect(x: bounds.width / 2 - 10, y: bounds.height/2 - 32, width: 20, height: 290),
+                                   type: .second)
         
-        hourHand.display(animation: true)
-        minuteHand.display(animation: true)
-        secondHand.display(animation: true)
+        hourHand.setRotation(CGPoint.zero)
+        minuteHand.setRotation(CGPoint.zero)
+        secondHand.setRotation(CGPoint(x: 0, y: 32))
         
         addSubview(hourHand)
         addSubview(minuteHand)
         addSubview(secondHand)
         
-        NSLayoutConstraint.activate([
-            hourHand.centerXAnchor.constraint(equalTo: centerXAnchor),
-            hourHand.centerYAnchor.constraint(equalTo: centerYAnchor, constant: -hourHand.frame.height / 2),
-            minuteHand.centerXAnchor.constraint(equalTo: centerXAnchor),
-            minuteHand.centerYAnchor.constraint(equalTo: centerYAnchor, constant: -minuteHand.frame.height / 2),
-            secondHand.centerXAnchor.constraint(equalTo: centerXAnchor),
-            secondHand.centerYAnchor.constraint(equalTo: centerYAnchor, constant: -secondHand.frame.height / 2)
-        ])
-
-        
         updateHands()
-//        startTimer()
     }
     
     func display(animation: Bool) {
@@ -89,13 +78,13 @@ class WatchDialView: NSView {
             let innerTickRadius: CGFloat
             
             if i % 5 == 0 {
-                innerTickRadius = dialRadius - largeTickLength
+                innerTickRadius = _dialRadius - _largeTickLength
             } else {
-                innerTickRadius = dialRadius - smallTickLength
+                innerTickRadius = _dialRadius - _smallTickLength
             }
             
             let startPoint = pointOnCircle(center: dialCenter, radius: innerTickRadius, angle: tickStartAngle)
-            let endPoint = pointOnCircle(center: dialCenter, radius: dialRadius, angle: tickStartAngle)
+            let endPoint = pointOnCircle(center: dialCenter, radius: _dialRadius, angle: tickStartAngle)
             
             dialPath.move(to: startPoint)
             dialPath.line(to: endPoint)
@@ -107,6 +96,10 @@ class WatchDialView: NSView {
         wantsLayer = true
         layer?.addSublayer(shapeLayer)
         
+        layer?.backgroundColor = NSColor.black.withAlphaComponent(0.7).cgColor
+        layer?.cornerRadius = _dialRadius
+        layer?.masksToBounds = true
+        
         // 创建 Animation
         let anim = CABasicAnimation(keyPath: "strokeEnd")
         anim.fromValue = 0.0
@@ -116,54 +109,47 @@ class WatchDialView: NSView {
         if animation {
             // 设置 layer 的 animation
             shapeLayer.add(anim, forKey: nil)
-            
         }
-
     }
     
     private func pointOnCircle(center: CGPoint, radius: CGFloat, angle: CGFloat) -> CGPoint {
         return CGPoint(x: center.x + radius * cos(angle), y: center.y + radius * sin(angle))
     }
     
-    
-    
     func updateHands() {
         let currentTime = Date()
+        
         let calendar = Calendar.current
         let hour = calendar.component(.hour, from: currentTime) % 12
         let minute = calendar.component(.minute, from: currentTime)
         let second = calendar.component(.second, from: currentTime)
         
-        let hourRotation = CGFloat(Double(hour) / 12.0 * 360.0)
-        let minuteRotation = CGFloat(Double(minute) / 60.0 * 360.0)
-        let secondRotation = CGFloat(Double(second) / 60.0 * 360.0)
+        let timeInterval = currentTime.timeIntervalSince1970
+        let secondDecimal = Double(second) + timeInterval - Double(Int(timeInterval))    // 获取当前秒，小数点后保留毫秒
+        let minuteDecimal = Double(minute) + (secondDecimal / 60)
+        let hourDecimal = Double(hour) + minuteDecimal / 60
+        
+        let hourRotation = CGFloat(hourDecimal / 12.0 * 360.0)
+        let minuteRotation = CGFloat(minuteDecimal / 60.0 * 360.0)
+        let secondRotation = CGFloat(secondDecimal / 60.0 * 360.0)
         
         
-        let rotationTransform = CGAffineTransform(translationX: 1, y: 10)
+        let rotationTransformH = CGAffineTransform(translationX: 3, y: 0)
+            .rotated(by: -hourRotation * CGFloat.pi / 180)
+            .translatedBy(x: -3, y: 0)
+        
+        let rotationTransformM = CGAffineTransform(translationX: 3, y: 0)
+            .rotated(by: -minuteRotation * CGFloat.pi / 180)
+            .translatedBy(x: -3, y: 0)
+        
+        let rotationTransformS = CGAffineTransform(translationX: 10, y: 32)
             .rotated(by: -secondRotation * CGFloat.pi / 180)
-            .translatedBy(x: -1, y: -10)
-//        secondHand.layer?.setAffineTransform(rotationTransform)
-        
-        hourHand.layer?.setAffineTransform(CGAffineTransform(rotationAngle: -hourRotation * CGFloat.pi / 180))
+            .translatedBy(x: -10, y: -32)
         
         // 创建旋转变换并应用到视图的主层
-        minuteHand.layer?.setAffineTransform(CGAffineTransform(rotationAngle: -minuteRotation * CGFloat.pi / 180))
-        secondHand.layer?.setAffineTransform(rotationTransform)
+        hourHand.layer?.setAffineTransform(rotationTransformH)
+        minuteHand.layer?.setAffineTransform(rotationTransformM)
+        secondHand.layer?.setAffineTransform(rotationTransformS)
     }
-    
-//    private func startTimer() {
-//        timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { [weak self] _ in
-//            self?.updateHands()
-//        }
-//    }
-
-//    private func stopTimer() {
-//        timer?.invalidate()
-//        timer = nil
-//    }
-
-//    deinit {
-//        stopTimer()
-//    }
 }
 

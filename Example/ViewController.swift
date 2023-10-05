@@ -13,26 +13,18 @@ class ViewController: NSViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        let width = (NSScreen.main?.frame.width ?? 0)
+        let height = (NSScreen.main?.frame.height ?? 0)
         
-        let screenSaverView = MechanicalWatchView(frame: CGRect(x: 0, y: 0, width: view.bounds.width, height: view.bounds.height), isPreview: true)
+        let screenSaverView = MechanicalWatch(frame: CGRect(x: 0, y: 0, width: width, height: height), isPreview: true)
         screenSaverView?.autoresizingMask = [.width, .height]
         
         view.addSubview(screenSaverView!)
         screenSaverView?.startAnimation()
-        
-        Timer.scheduledTimer(withTimeInterval: 0.25, repeats: true) { _ in
-            screenSaverView?.animateOneFrame()
-        }
-        
-//        self.Sundial = [[Sundial alloc] initWithFrame:CGRectMake(0, 30, self.view.bounds.size.width, self.view.bounds.size.height - 30) isPreview:YES];
-//        [self.Sundial setAutoresizingMask:NSViewHeightSizable|NSViewWidthSizable];
-//        [self.view addSubview:self.Sundial];
-//        [self.Sundial startAnimation];
 //
-//        [NSTimer scheduledTimerWithTimeInterval:0.25 repeats:YES block:^(NSTimer * _Nonnull timer) {
-//            [self.Sundial animateOneFrame];
-//        }];
-//
+//        Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { _ in
+//            screenSaverView?.animateOneFrame()
+//        }
     }
 
     override var representedObject: Any? {

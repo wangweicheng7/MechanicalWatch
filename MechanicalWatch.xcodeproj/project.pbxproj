@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		BC21CE5429F7D1FF005A27EF /* MechanicalWatchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC21CE4E29F7D1FE005A27EF /* MechanicalWatchView.swift */; };
+		BC21CE5429F7D1FF005A27EF /* MechanicalWatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC21CE4E29F7D1FE005A27EF /* MechanicalWatch.swift */; };
 		BC21CE5529F7D1FF005A27EF /* WatchHandView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC21CE4F29F7D1FE005A27EF /* WatchHandView.swift */; };
 		BC21CE5629F7D1FF005A27EF /* NSBezierPath+Quartz.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC21CE5029F7D1FE005A27EF /* NSBezierPath+Quartz.swift */; };
 		BC21CE5729F7D1FF005A27EF /* GearView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC21CE5129F7D1FE005A27EF /* GearView.swift */; };
@@ -17,12 +17,24 @@
 		BC21CE7629F7D308005A27EF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC21CE7529F7D308005A27EF /* ViewController.swift */; };
 		BC21CE7829F7D309005A27EF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC21CE7729F7D309005A27EF /* Assets.xcassets */; };
 		BC21CE7B29F7D30A005A27EF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC21CE7929F7D309005A27EF /* Main.storyboard */; };
-		BC21CE8229FA1C04005A27EF /* MechanicalWatchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC21CE4E29F7D1FE005A27EF /* MechanicalWatchView.swift */; };
+		BC21CE8229FA1C04005A27EF /* MechanicalWatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC21CE4E29F7D1FE005A27EF /* MechanicalWatch.swift */; };
 		BC21CE8329FA1C0F005A27EF /* GearView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC21CE5129F7D1FE005A27EF /* GearView.swift */; };
 		BC21CE8429FA1C0F005A27EF /* WatchDialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC21CE5329F7D1FF005A27EF /* WatchDialView.swift */; };
 		BC21CE8529FA1C0F005A27EF /* Number+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC21CE5229F7D1FF005A27EF /* Number+Ex.swift */; };
 		BC21CE8629FA1C0F005A27EF /* WatchHandView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC21CE4F29F7D1FE005A27EF /* WatchHandView.swift */; };
 		BC21CE8729FA1C0F005A27EF /* NSBezierPath+Quartz.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC21CE5029F7D1FE005A27EF /* NSBezierPath+Quartz.swift */; };
+		BCD051B229FD3A5000202F0D /* NSImage+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD051B129FD3A5000202F0D /* NSImage+Ex.swift */; };
+		BCD051B329FD3A5000202F0D /* NSImage+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD051B129FD3A5000202F0D /* NSImage+Ex.swift */; };
+		BCD051B629FD3B8C00202F0D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BCD051B529FD3B8C00202F0D /* Assets.xcassets */; };
+		BCD051B729FD3B8C00202F0D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BCD051B529FD3B8C00202F0D /* Assets.xcassets */; };
+		BCD051B929FD3DB800202F0D /* ic_second_hand.png in Resources */ = {isa = PBXBuildFile; fileRef = BCD051B829FD3DB800202F0D /* ic_second_hand.png */; };
+		BCD051BA29FD3DB800202F0D /* ic_second_hand.png in Resources */ = {isa = PBXBuildFile; fileRef = BCD051B829FD3DB800202F0D /* ic_second_hand.png */; };
+		BCD051BD29FD56E500202F0D /* ic_minute_hand.png in Resources */ = {isa = PBXBuildFile; fileRef = BCD051BB29FD56E500202F0D /* ic_minute_hand.png */; };
+		BCD051BE29FD56E500202F0D /* ic_minute_hand.png in Resources */ = {isa = PBXBuildFile; fileRef = BCD051BB29FD56E500202F0D /* ic_minute_hand.png */; };
+		BCD051BF29FD56E500202F0D /* ic_hour_hand.png in Resources */ = {isa = PBXBuildFile; fileRef = BCD051BC29FD56E500202F0D /* ic_hour_hand.png */; };
+		BCD051C029FD56E500202F0D /* ic_hour_hand.png in Resources */ = {isa = PBXBuildFile; fileRef = BCD051BC29FD56E500202F0D /* ic_hour_hand.png */; };
+		BCD051C229FD5BE400202F0D /* DoubleGearView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD051C129FD5BE300202F0D /* DoubleGearView.swift */; };
+		BCD051C329FD5BE400202F0D /* DoubleGearView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD051C129FD5BE300202F0D /* DoubleGearView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,7 +49,7 @@
 
 /* Begin PBXFileReference section */
 		BC21CE4229F7D1D2005A27EF /* MechanicalWatch.saver */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MechanicalWatch.saver; sourceTree = BUILT_PRODUCTS_DIR; };
-		BC21CE4E29F7D1FE005A27EF /* MechanicalWatchView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MechanicalWatchView.swift; sourceTree = "<group>"; };
+		BC21CE4E29F7D1FE005A27EF /* MechanicalWatch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MechanicalWatch.swift; sourceTree = "<group>"; };
 		BC21CE4F29F7D1FE005A27EF /* WatchHandView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WatchHandView.swift; sourceTree = "<group>"; };
 		BC21CE5029F7D1FE005A27EF /* NSBezierPath+Quartz.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSBezierPath+Quartz.swift"; sourceTree = "<group>"; };
 		BC21CE5129F7D1FE005A27EF /* GearView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GearView.swift; sourceTree = "<group>"; };
@@ -49,6 +61,12 @@
 		BC21CE7729F7D309005A27EF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BC21CE7A29F7D30A005A27EF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BC21CE7C29F7D30A005A27EF /* Example.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Example.entitlements; sourceTree = "<group>"; };
+		BCD051B129FD3A5000202F0D /* NSImage+Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSImage+Ex.swift"; sourceTree = "<group>"; };
+		BCD051B529FD3B8C00202F0D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BCD051B829FD3DB800202F0D /* ic_second_hand.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_second_hand.png; sourceTree = "<group>"; };
+		BCD051BB29FD56E500202F0D /* ic_minute_hand.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_minute_hand.png; sourceTree = "<group>"; };
+		BCD051BC29FD56E500202F0D /* ic_hour_hand.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_hour_hand.png; sourceTree = "<group>"; };
+		BCD051C129FD5BE300202F0D /* DoubleGearView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleGearView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,12 +108,18 @@
 		BC21CE4429F7D1D2005A27EF /* MechanicalWatch */ = {
 			isa = PBXGroup;
 			children = (
-				BC21CE4E29F7D1FE005A27EF /* MechanicalWatchView.swift */,
+				BCD051BC29FD56E500202F0D /* ic_hour_hand.png */,
+				BCD051BB29FD56E500202F0D /* ic_minute_hand.png */,
+				BCD051B829FD3DB800202F0D /* ic_second_hand.png */,
+				BC21CE4E29F7D1FE005A27EF /* MechanicalWatch.swift */,
 				BC21CE5129F7D1FE005A27EF /* GearView.swift */,
+				BCD051C129FD5BE300202F0D /* DoubleGearView.swift */,
 				BC21CE5329F7D1FF005A27EF /* WatchDialView.swift */,
 				BC21CE4F29F7D1FE005A27EF /* WatchHandView.swift */,
 				BC21CE5029F7D1FE005A27EF /* NSBezierPath+Quartz.swift */,
 				BC21CE5229F7D1FF005A27EF /* Number+Ex.swift */,
+				BCD051B129FD3A5000202F0D /* NSImage+Ex.swift */,
+				BCD051B529FD3B8C00202F0D /* Assets.xcassets */,
 			);
 			path = MechanicalWatch;
 			sourceTree = "<group>";
@@ -204,6 +228,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BCD051B629FD3B8C00202F0D /* Assets.xcassets in Resources */,
+				BCD051B929FD3DB800202F0D /* ic_second_hand.png in Resources */,
+				BCD051BF29FD56E500202F0D /* ic_hour_hand.png in Resources */,
+				BCD051BD29FD56E500202F0D /* ic_minute_hand.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -212,7 +240,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				BC21CE7829F7D309005A27EF /* Assets.xcassets in Resources */,
+				BCD051BA29FD3DB800202F0D /* ic_second_hand.png in Resources */,
+				BCD051C029FD56E500202F0D /* ic_hour_hand.png in Resources */,
+				BCD051B729FD3B8C00202F0D /* Assets.xcassets in Resources */,
 				BC21CE7B29F7D30A005A27EF /* Main.storyboard in Resources */,
+				BCD051BE29FD56E500202F0D /* ic_minute_hand.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -224,8 +256,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				BC21CE5629F7D1FF005A27EF /* NSBezierPath+Quartz.swift in Sources */,
-				BC21CE5429F7D1FF005A27EF /* MechanicalWatchView.swift in Sources */,
+				BC21CE5429F7D1FF005A27EF /* MechanicalWatch.swift in Sources */,
+				BCD051B229FD3A5000202F0D /* NSImage+Ex.swift in Sources */,
 				BC21CE5929F7D1FF005A27EF /* WatchDialView.swift in Sources */,
+				BCD051C229FD5BE400202F0D /* DoubleGearView.swift in Sources */,
 				BC21CE5529F7D1FF005A27EF /* WatchHandView.swift in Sources */,
 				BC21CE5729F7D1FF005A27EF /* GearView.swift in Sources */,
 				BC21CE5829F7D1FF005A27EF /* Number+Ex.swift in Sources */,
@@ -238,11 +272,13 @@
 			files = (
 				BC21CE7629F7D308005A27EF /* ViewController.swift in Sources */,
 				BC21CE8529FA1C0F005A27EF /* Number+Ex.swift in Sources */,
+				BCD051B329FD3A5000202F0D /* NSImage+Ex.swift in Sources */,
 				BC21CE8429FA1C0F005A27EF /* WatchDialView.swift in Sources */,
 				BC21CE8629FA1C0F005A27EF /* WatchHandView.swift in Sources */,
 				BC21CE7429F7D308005A27EF /* AppDelegate.swift in Sources */,
 				BC21CE8729FA1C0F005A27EF /* NSBezierPath+Quartz.swift in Sources */,
-				BC21CE8229FA1C04005A27EF /* MechanicalWatchView.swift in Sources */,
+				BC21CE8229FA1C04005A27EF /* MechanicalWatch.swift in Sources */,
+				BCD051C329FD5BE400202F0D /* DoubleGearView.swift in Sources */,
 				BC21CE8329FA1C0F005A27EF /* GearView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -396,7 +432,7 @@
 					"@loader_path/../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.weicheng.MechanicalWatch;
+				PRODUCT_BUNDLE_IDENTIFIER = com.weicheng.mechanicalwatch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -423,7 +459,7 @@
 					"@loader_path/../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.weicheng.MechanicalWatch;
+				PRODUCT_BUNDLE_IDENTIFIER = com.weicheng.mechanicalwatch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
